@@ -1,3 +1,3 @@
 # JECRC-Pay
 JECRC Payment App
-This App includes the jecrc events notifications and the payments portal.
+This App includes jecrc events notifications and the payments portal.
