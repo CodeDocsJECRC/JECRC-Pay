@@ -1,4 +1,4 @@
-package com.example.admin.navbottom;
+package com.example.admin.navbottom.PaytmClasses;
 
 import com.google.gson.annotations.SerializedName;
 

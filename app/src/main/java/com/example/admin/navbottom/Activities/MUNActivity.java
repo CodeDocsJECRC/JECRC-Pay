@@ -1,15 +1,17 @@
-package com.example.admin.navbottom;
+package com.example.admin.navbottom.Activities;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.admin.navbottom.Api;
+import com.example.admin.navbottom.ModelClasses.Constants;
+import com.example.admin.navbottom.PaytmClasses.Checksum;
+import com.example.admin.navbottom.PaytmClasses.Paytm;
+import com.example.admin.navbottom.R;
 import com.paytm.pgsdk.PaytmOrder;
 import com.paytm.pgsdk.PaytmPGService;
 import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
@@ -23,7 +25,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class mun extends AppCompatActivity implements PaytmPaymentTransactionCallback {
+public class MUNActivity extends AppCompatActivity implements PaytmPaymentTransactionCallback {
   TextView textViewPrice;
   Button b;
     @Override

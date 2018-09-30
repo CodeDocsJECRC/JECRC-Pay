@@ -1,4 +1,4 @@
-package com.example.admin.navbottom;
+package com.example.admin.navbottom.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,13 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.admin.navbottom.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private int counter =5;
     private EditText e1,e2;
@@ -53,7 +53,7 @@ public class Login extends AppCompatActivity {
         SIGNUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),reg_activity.class);
+                Intent i=new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
 
                     validate();
                 }catch (Exception e){
-                    Toast.makeText(Login.this, ""+e, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, ""+e, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -87,7 +87,7 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 { progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Login success!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "LoginActivity success!", Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(i);
                     finish();
@@ -95,7 +95,7 @@ public class Login extends AppCompatActivity {
                 }
                 else
                 {progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "LoginActivity Failed!", Toast.LENGTH_SHORT).show();
                     counter--;
                     t.setText("No. of Attempts Remaining "+ String.valueOf(counter));
                     if(counter==0)

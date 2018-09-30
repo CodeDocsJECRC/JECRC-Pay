@@ -1,4 +1,4 @@
-package com.example.admin.navbottom;
+package com.example.admin.navbottom.ModelClasses;
 
 public class Constants {
     public static final String M_ID = "YOUR MERCHANT ID"; //Paytm Merchand Id we got it in paytm credentials

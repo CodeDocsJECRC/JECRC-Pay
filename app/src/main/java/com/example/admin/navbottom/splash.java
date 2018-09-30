@@ -1,15 +1,12 @@
 package com.example.admin.navbottom;
 
 
-import android.support.v7.app.ActionBar;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+
+import com.example.admin.navbottom.Activities.LoginActivity;
 
 public class splash extends AppCompatActivity {
 ProgressBar p;
@@ -43,7 +40,7 @@ ProgressBar p;
                 }
                 finally {
                     Intent i;
-                    i=new Intent(getApplicationContext(),Login.class);
+                    i=new Intent(getApplicationContext(),LoginActivity.class);
                     startActivity(i);
                     finish();
                 }
