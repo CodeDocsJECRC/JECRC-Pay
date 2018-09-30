@@ -1,4 +1,4 @@
 <?php
 //Change the value of PAYTM_MERCHANT_KEY constant with details received from Paytm.
-define('PAYTM_MERCHANT_KEY','r7ZJ%lVIM475hz4u'); 
+define('PAYTM_MERCHANT_KEY','bKMfNxPPf_QdZppa'); 
 ?>
